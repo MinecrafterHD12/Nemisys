@@ -518,14 +518,14 @@ public class Player implements CommandSender {
             return;
         }
         if (this.server.getMaxPlayers() <= this.server.getOnlinePlayers().size()) {
-            this.close("Synapse Server: " + TextFormat.RED + "Synapse server is full!");
+            this.close("§cProxy server is full!");
             return;
         }
 
         Client client = this.server.getClient(ev.getClientHash());
 
         if (client == null) {
-            this.close("Synapse Server: " + TextFormat.RED + "Target server is not online!");
+            this.close("§cTarget server is not online!");
             return;
         }
 
